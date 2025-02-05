@@ -1,52 +1,48 @@
-# Prerequisites
-*.d
-
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
-
-# Linker output
-*.ilk
-*.map
-*.exp
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+       Time Complexity:   
+   
+Creating an Appointment (createAppointment): This function allocates memory for an 
+appointment structure and reads input from the user. The time complexity for memory allocation 
+is O(1), and the time complexity for reading input is generally O(n), where n is the size of the 
+input. In this case, n is the maximum length of the strings (50 characters for 'name' and 20 
+characters for 'date' and 'time'). Therefore, the time complexity for creating an appointment is O(1).   
+   
+Initializing a Queue (createQueue): Initializing a queue involves memory allocation, which is O(1) 
+in terms of time complexity.   
+   
+Enqueueing an Appointment (enqueue): Enqueueing an appointment involves modifying the 
+pointers of the queue. This operation is generally O(1) in terms of time complexity because it 
+involves updating a few pointers regardless of the size of the queue.   
+   
+Displaying Appointments (displayAppointments): Displaying appointments requires traversing 
+the entire queue. In the worst case, when all appointments are to be displayed, this operation has a 
+time complexity of O(n), where n is the number of appointments in the queue.   
+   
+Main Loop (main): The main loop runs until the user chooses to exit, so the number of iterations 
+depends on the user's interactions, but each iteration is relatively quick. Therefore, the main loop's 
+time complexity is primarily driven by the choices the user makes.   
+   
+Space Complexity:   
+  
+Creating an Appointment (createAppointment): This function allocates memory for an 
+appointment structure. The space complexity is O(1) because it allocates a fixed amount of 
+memory for each appointment.   
+   
+  
+Initializing a Queue (createQueue): Initializing a queue involves allocating memory for the queue 
+structure. The space complexity is O(1).   
+   
+Enqueueing an Appointment (enqueue): This operation doesn't allocate additional memory for the 
+appointment itself but involves changing pointers in the queue structure. The space complexity is 
+O(1).   
+   
+Displaying Appointments (displayAppointments): This function uses a constant amount of 
+memory for temporary variables. The space complexity is O(1).   
+   
+Main Function (main): The space complexity for the main function is primarily determined by the 
+space required for the appointment queue. If there are 'n' appointments in the queue, the space 
+complexity is O(n) because each appointment occupies a fixed amount of memory.   
+   
+In summary, the time complexity of the operations in this code is generally quite efficient. The 
+most time-consuming operation is displaying appointments, which has a linear time complexity 
+with respect to the number of appointments. The space complexity is also reasonable, mainly 
+dependent on the number of appointments in the queue.   
